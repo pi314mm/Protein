@@ -1,21 +1,23 @@
 #!/usr/bin/env python
 
-# ./write.py [rnaFile] [translationFile] [codeFiles...]
+# ./write.py [rna file] [translation file] [code files...]
 
 import sys
 
 code = []
-for f in sys.arg[3:]:
-  code.append(f, "r").read())
+for f in sys.argv[3:]:
+  code.append(open(f, "r").read())
 
 letters = "".join(i for i in sorted(set("".join( j for j in code))))
 if len(letters)>60:
   print "too many letters"
+  print letters
+  print len(letters)
   sys.exit()
   
-lettersOut = open(sys.argv[2], "w")
-lettersOut.write(letters)
-lettersOut.close()
+letters_out = open(sys.argv[2], "w")
+letters_out.write(letters)
+letters_out.close()
 
 start = "AUG"
 end = ["UAG", "UAA", "UGA"]
