@@ -1,0 +1,15 @@
+./interpreter.py example/rna example/translation1 test1
+./interpreter.py example/rna example/translation2 test2
+./interpreter.py example/rna example/translation3 test3
+
+test1
+ 0 - beer program
+ 10 - hello world
+
+test2
+  11 - fibonacci program
+  35 - interpreter
+  74 - helper code to make the rna
+
+test3
+  117 - something with an image
